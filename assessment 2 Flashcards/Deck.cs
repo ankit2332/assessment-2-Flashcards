@@ -18,7 +18,7 @@ namespace assessment_2_Flashcards
             this.filename = filename;
             cards = new Card[4];
         }
-
+        c
         public void loadfile()
         {
             int count = 0;
