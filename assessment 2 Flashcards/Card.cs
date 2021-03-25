@@ -18,22 +18,18 @@ namespace assessment_2_Flashcards
             this.def = def;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns>Gets the word on the card.</returns>
-        public string getword()
-        {
-            return word;
-        }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns>Gets the definision of the word.</returns>
-        public string getdef()
+        //Gets the word on the card.
+        public string getcardtext()
         {
-            return def;
+            if(flipped == true)
+            {
+                return def;
+            }
+            else
+            {
+                return word;
+            }
         }
 
         /// <summary>
@@ -45,9 +41,8 @@ namespace assessment_2_Flashcards
             return flipped;
         }
 
-        /// <summary>
-        /// This flips the card around.
-        /// </summary>
+
+        //This flips the card around.
         public void flip()
         {
             if(flipped == false)
