@@ -43,6 +43,16 @@ namespace assessment_2_Flashcards
         {
             deck.nextbutton();
             textBox1.Text = deck.getcard().getcardtext();
+            int temp = deck.getdecklength();
+            int addprogress = 100 / temp;
+            if (progressBar1.Value >= 90)
+            {
+                progressBar1.Value = 0;
+            }
+            else
+            {
+                progressBar1.Value += addprogress;
+            }
 
         }
 
@@ -50,6 +60,16 @@ namespace assessment_2_Flashcards
         {
             deck.backbutton();
             textBox1.Text = deck.getcard().getcardtext();
+            int temp = deck.getdecklength();
+            int addprogress = 100 / temp;
+            if (progressBar1.Value <= 10)
+            {
+                progressBar1.Value = 100;
+            }
+            else
+            {
+                progressBar1.Value -= addprogress;
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -57,5 +77,15 @@ namespace assessment_2_Flashcards
             deck.Randomcardbutton();
             textBox1.Text = deck.getcard().getcardtext();
         }
+
+        private void Shufflebutton_Click(object sender, EventArgs e)
+        {
+            deck.shufflecardbutton();
+            textBox1.Text = deck.getcard().getcardtext();
+        }
+
+
+
+
     }
 }

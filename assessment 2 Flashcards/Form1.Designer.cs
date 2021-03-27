@@ -38,13 +38,14 @@ namespace assessment_2_Flashcards
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Shufflebutton = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // Browsefile
             // 
-            this.Browsefile.Location = new System.Drawing.Point(173, 13);
+            this.Browsefile.Location = new System.Drawing.Point(555, 12);
             this.Browsefile.Name = "Browsefile";
-            this.Browsefile.Size = new System.Drawing.Size(195, 37);
+            this.Browsefile.Size = new System.Drawing.Size(97, 26);
             this.Browsefile.TabIndex = 0;
             this.Browsefile.Text = "Browse";
             this.Browsefile.UseVisualStyleBackColor = true;
@@ -56,9 +57,9 @@ namespace assessment_2_Flashcards
             // 
             // Flipcard
             // 
-            this.Flipcard.Location = new System.Drawing.Point(286, 159);
+            this.Flipcard.Location = new System.Drawing.Point(326, 199);
             this.Flipcard.Name = "Flipcard";
-            this.Flipcard.Size = new System.Drawing.Size(195, 37);
+            this.Flipcard.Size = new System.Drawing.Size(97, 25);
             this.Flipcard.TabIndex = 2;
             this.Flipcard.Text = "Flip";
             this.Flipcard.UseVisualStyleBackColor = true;
@@ -66,9 +67,9 @@ namespace assessment_2_Flashcards
             // 
             // Loadfile
             // 
-            this.Loadfile.Location = new System.Drawing.Point(411, 12);
+            this.Loadfile.Location = new System.Drawing.Point(673, 12);
             this.Loadfile.Name = "Loadfile";
-            this.Loadfile.Size = new System.Drawing.Size(195, 38);
+            this.Loadfile.Size = new System.Drawing.Size(97, 26);
             this.Loadfile.TabIndex = 4;
             this.Loadfile.Text = "Load";
             this.Loadfile.UseVisualStyleBackColor = true;
@@ -76,9 +77,9 @@ namespace assessment_2_Flashcards
             // 
             // Nextbutton
             // 
-            this.Nextbutton.Location = new System.Drawing.Point(498, 159);
+            this.Nextbutton.Location = new System.Drawing.Point(473, 199);
             this.Nextbutton.Name = "Nextbutton";
-            this.Nextbutton.Size = new System.Drawing.Size(195, 37);
+            this.Nextbutton.Size = new System.Drawing.Size(97, 25);
             this.Nextbutton.TabIndex = 6;
             this.Nextbutton.Text = "Next";
             this.Nextbutton.UseVisualStyleBackColor = true;
@@ -86,9 +87,9 @@ namespace assessment_2_Flashcards
             // 
             // Backbutton
             // 
-            this.Backbutton.Location = new System.Drawing.Point(75, 159);
+            this.Backbutton.Location = new System.Drawing.Point(187, 199);
             this.Backbutton.Name = "Backbutton";
-            this.Backbutton.Size = new System.Drawing.Size(195, 37);
+            this.Backbutton.Size = new System.Drawing.Size(97, 25);
             this.Backbutton.TabIndex = 7;
             this.Backbutton.Text = "Back";
             this.Backbutton.UseVisualStyleBackColor = true;
@@ -96,17 +97,17 @@ namespace assessment_2_Flashcards
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(173, 107);
+            this.textBox1.Location = new System.Drawing.Point(173, 160);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(433, 20);
             this.textBox1.TabIndex = 8;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(173, 222);
+            this.button1.Location = new System.Drawing.Point(187, 235);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(195, 37);
+            this.button1.Size = new System.Drawing.Size(97, 25);
             this.button1.TabIndex = 9;
             this.button1.Text = "Random Card";
             this.button1.UseVisualStyleBackColor = true;
@@ -114,18 +115,27 @@ namespace assessment_2_Flashcards
             // 
             // Shufflebutton
             // 
-            this.Shufflebutton.Location = new System.Drawing.Point(411, 222);
+            this.Shufflebutton.Location = new System.Drawing.Point(326, 235);
             this.Shufflebutton.Name = "Shufflebutton";
-            this.Shufflebutton.Size = new System.Drawing.Size(195, 37);
+            this.Shufflebutton.Size = new System.Drawing.Size(97, 25);
             this.Shufflebutton.TabIndex = 10;
             this.Shufflebutton.Text = "Shuffle";
             this.Shufflebutton.UseVisualStyleBackColor = true;
+            this.Shufflebutton.Click += new System.EventHandler(this.Shufflebutton_Click);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 15);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(537, 23);
+            this.progressBar1.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 286);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Shufflebutton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -152,6 +162,7 @@ namespace assessment_2_Flashcards
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Shufflebutton;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
