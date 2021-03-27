@@ -64,20 +64,6 @@ namespace assessment_2_Flashcards
         }
         public void nextbutton()
         {
-            if(topcard == 0)
-            {
-                topcard = length-1;
-                
-            }
-            else
-            {
-                topcard--;
-            }
-            
-        }
-
-        public void backbutton()
-        {
             if (topcard == length - 1)
             {
                 topcard = 0;
@@ -85,6 +71,21 @@ namespace assessment_2_Flashcards
             else
             {
                 topcard++;
+            }
+           
+            
+        }
+
+        public void backbutton()
+        {
+            if (topcard == 0)
+            {
+                topcard = length - 1;
+
+            }
+            else
+            {
+                topcard--;
             }
 
         }
@@ -97,6 +98,11 @@ namespace assessment_2_Flashcards
                 randomnum = rnd.Next(0, cards.Length);
             }
             topcard = randomnum;
+        }
+
+        public int gettopcard()
+        {
+            return topcard;
         }
 
         public void shufflecardbutton()

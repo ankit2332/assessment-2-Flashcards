@@ -14,6 +14,7 @@ namespace assessment_2_Flashcards
     {
         
         Deck deck;
+        int addprogress = 0;
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +30,9 @@ namespace assessment_2_Flashcards
         {
             deck = new Deck(openFileDialog1.FileName);
             textBox1.Text = deck.getcard(0).getcardtext();
+            int temp = deck.getdecklength();
+            addprogress = 100 / temp;
+            progressBar1.Value = addprogress;
 
         }
 
@@ -44,10 +48,10 @@ namespace assessment_2_Flashcards
             deck.nextbutton();
             textBox1.Text = deck.getcard().getcardtext();
             int temp = deck.getdecklength();
-            int addprogress = 100 / temp;
+            addprogress = 100 / temp;
             if (progressBar1.Value >= 90)
             {
-                progressBar1.Value = 0;
+                progressBar1.Value = addprogress;
             }
             else
             {
@@ -61,8 +65,8 @@ namespace assessment_2_Flashcards
             deck.backbutton();
             textBox1.Text = deck.getcard().getcardtext();
             int temp = deck.getdecklength();
-            int addprogress = 100 / temp;
-            if (progressBar1.Value <= 10)
+            addprogress = 100 / temp;
+            if (progressBar1.Value <= addprogress)
             {
                 progressBar1.Value = 100;
             }
@@ -76,6 +80,11 @@ namespace assessment_2_Flashcards
         {
             deck.Randomcardbutton();
             textBox1.Text = deck.getcard().getcardtext();
+            int temp = deck.getdecklength();
+            addprogress = 100 / temp;
+            int position = deck.gettopcard();
+            position += 1;
+            progressBar1.Value = addprogress * position;
         }
 
         private void Shufflebutton_Click(object sender, EventArgs e)
@@ -83,8 +92,6 @@ namespace assessment_2_Flashcards
             deck.shufflecardbutton();
             textBox1.Text = deck.getcard().getcardtext();
         }
-
-
 
 
     }
