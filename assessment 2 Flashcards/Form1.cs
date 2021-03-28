@@ -29,7 +29,7 @@ namespace assessment_2_Flashcards
             browse++;
         }
 
-        // when 'load' button is clicked it will load in the file the user picked.
+        // when 'load' button is clicked it will load in the file the user picked. 
         private void Loadfile_Click(object sender, EventArgs e)
         {
             if (browse == 0)
