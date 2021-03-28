@@ -1,0 +1,5 @@
+Dog, 4 legs and mostly big.
+Cat, 4 legs and mostly small.
+Human, 2 legs and has hands.
+Bird, two legs has wings.
+Snake, no legs.
