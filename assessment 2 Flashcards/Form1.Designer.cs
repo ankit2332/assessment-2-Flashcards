@@ -37,7 +37,7 @@ namespace assessment_2_Flashcards
             this.Nextbutton = new System.Windows.Forms.Button();
             this.Backbutton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Randomcardbutton = new System.Windows.Forms.Button();
             this.Shufflebutton = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
@@ -103,16 +103,16 @@ namespace assessment_2_Flashcards
             this.textBox1.Size = new System.Drawing.Size(500, 20);
             this.textBox1.TabIndex = 8;
             // 
-            // button1
+            // Randomcardbutton
             // 
-            this.button1.Location = new System.Drawing.Point(303, 309);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(110, 36);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Random Card";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.Randomcardbutton.Location = new System.Drawing.Point(303, 309);
+            this.Randomcardbutton.Name = "Randomcardbutton";
+            this.Randomcardbutton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Randomcardbutton.Size = new System.Drawing.Size(110, 36);
+            this.Randomcardbutton.TabIndex = 9;
+            this.Randomcardbutton.Text = "Random Card";
+            this.Randomcardbutton.UseVisualStyleBackColor = true;
+            this.Randomcardbutton.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Shufflebutton
             // 
@@ -129,6 +129,7 @@ namespace assessment_2_Flashcards
             this.progressBar1.Location = new System.Drawing.Point(12, 12);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(611, 26);
+            this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 14;
             // 
             // Form1
@@ -140,7 +141,7 @@ namespace assessment_2_Flashcards
             this.ClientSize = new System.Drawing.Size(885, 401);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Shufflebutton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Randomcardbutton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Backbutton);
             this.Controls.Add(this.Nextbutton);
@@ -163,7 +164,7 @@ namespace assessment_2_Flashcards
         private System.Windows.Forms.Button Nextbutton;
         private System.Windows.Forms.Button Backbutton;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Randomcardbutton;
         private System.Windows.Forms.Button Shufflebutton;
         private System.Windows.Forms.ProgressBar progressBar1;
     }

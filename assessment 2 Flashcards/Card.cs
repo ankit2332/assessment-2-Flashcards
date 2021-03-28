@@ -19,7 +19,7 @@ namespace assessment_2_Flashcards
         }
 
 
-        //Gets the word on the card.
+        //getting the texts on the card.
         public string getcardtext()
         {
             if(flipped == true)

@@ -14,6 +14,7 @@ namespace assessment_2_Flashcards
         private int topcard = 0;
         int length;
 
+        // getting the file name.
         public Deck(string filename)
         {
             this.filename = filename;
@@ -23,14 +24,13 @@ namespace assessment_2_Flashcards
         /// <summary>
         /// get decks length.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Length of the deck</returns>
         public int getdecklength()
         {
             return length;
         }
-        /// <summary>
-        /// loads in the file and splits the text's in the file
-        /// </summary>
+
+        // loads in the file and splits the text's in the file
         public void loadfile()
         {
             length = 0;
@@ -53,15 +53,20 @@ namespace assessment_2_Flashcards
             }
         }
 
+        //returning me the card but not the text.
         public Card getcard(int topcard)
         {
             return cards[topcard];
         }
 
+        //overloading getcard.
         public Card getcard()
         {
             return cards[topcard];
         }
+        //this is checking if the top card is the last card of the deck, 
+        //if it is then it will set the top card to zero when the next button is clicked again.
+        //if it's not the last card then it will just go to the next card.
         public void nextbutton()
         {
             if (topcard == length - 1)
@@ -76,6 +81,8 @@ namespace assessment_2_Flashcards
             
         }
 
+        //same as the next button but instand of the last card it checks if its the first card and if it is then it will set it to the last card
+        //if not then it will just go back a card.
         public void backbutton()
         {
             if (topcard == 0)
@@ -89,6 +96,8 @@ namespace assessment_2_Flashcards
             }
 
         }
+
+        //this is getting a random card from the deck.
         public void Randomcardbutton()
         {
             Random rnd = new Random();
@@ -100,11 +109,13 @@ namespace assessment_2_Flashcards
             topcard = randomnum;
         }
 
+        //this is returning me the topcard.
         public int gettopcard()
         {
             return topcard;
         }
 
+        //shuffling the deck
         public void shufflecardbutton()
         {
             Random rnd = new Random();

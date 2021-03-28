@@ -14,28 +14,30 @@ namespace assessment_2_Flashcards
     {
         
         Deck deck;
-        int addprogress = 0;
+
         public Form1()
         {
             InitializeComponent();
+            
         }
 
+        // when 'browse' button is clicked it will open the user files to let the user pick a file.
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
             
         }
 
+        // when 'load' button is clicked it will load in the file the user picked.
         private void Loadfile_Click(object sender, EventArgs e)
         {
             deck = new Deck(openFileDialog1.FileName);
             textBox1.Text = deck.getcard(0).getcardtext();
-            int temp = deck.getdecklength();
-            addprogress = 100 / temp;
-            progressBar1.Value = addprogress;
-
+            progressBar1.Value = 1;
+            progressBar1.Maximum = deck.getdecklength();
         }
 
+        // when 'Flip' button is click it will flip the card.
         private void Flipcard_Click(object sender, EventArgs e)
         {
             deck.getcard().flip();
@@ -47,46 +49,45 @@ namespace assessment_2_Flashcards
         {
             deck.nextbutton();
             textBox1.Text = deck.getcard().getcardtext();
-            int temp = deck.getdecklength();
-            addprogress = 100 / temp;
-            if (progressBar1.Value >= 90)
+            if (progressBar1.Value >= deck.getdecklength())
             {
-                progressBar1.Value = addprogress;
+                progressBar1.Value = 1;
             }
             else
             {
-                progressBar1.Value += addprogress;
+                progressBar1.Value += 1;
             }
 
         }
 
+        //when back button is clicked it will go back one card. 
+        //when the the top card is this first card in the deck and the back button is click it will go to the lass card in the deck.
         private void Backbutton_Click(object sender, EventArgs e)
         {
             deck.backbutton();
             textBox1.Text = deck.getcard().getcardtext();
-            int temp = deck.getdecklength();
-            addprogress = 100 / temp;
-            if (progressBar1.Value <= addprogress)
+            
+            if (progressBar1.Value <= 1)
             {
-                progressBar1.Value = 100;
+                progressBar1.Value = deck.getdecklength();
             }
             else
             {
-                progressBar1.Value -= addprogress;
+                progressBar1.Value -= 1;
             }
         }
 
+        //when 'random card' button is clicked it will get a random card from the deck.
         private void button1_Click_1(object sender, EventArgs e)
         {
             deck.Randomcardbutton();
             textBox1.Text = deck.getcard().getcardtext();
-            int temp = deck.getdecklength();
-            addprogress = 100 / temp;
             int position = deck.gettopcard();
             position += 1;
-            progressBar1.Value = addprogress * position;
+            progressBar1.Value = 1 * position;
         }
 
+        // when 'shuffle' button is clicked it will shuffle the whole deck.
         private void Shufflebutton_Click(object sender, EventArgs e)
         {
             deck.shufflecardbutton();
